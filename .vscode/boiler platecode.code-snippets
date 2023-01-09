@@ -1,0 +1,17 @@
+{
+	"": {
+  "prefix": "boiler platecode",
+  "body": [
+    "#include <stdio.h>",
+    "#include <conio.h>",
+    "",
+    "int main()",
+    "{",
+    "    ",
+    "    getch();",
+    "    return 0;",
+    "}"
+  ],
+  "description": ""
+}
+}
