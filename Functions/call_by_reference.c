@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <conio.h>
 
-int factorial(int); // function prototype
+int factorial(int *); // function prototype
 
 int main()
 {
@@ -12,7 +12,7 @@ int main()
     printf("Enter the number: ");
     scanf("%d", &n);
 
-    fact = factorial(n); // fucntion calling
+    fact = factorial(&n); // fucntion calling
 
     printf("Factorial of %d is %d\n", n, fact);
 
@@ -20,10 +20,12 @@ int main()
     return 0;
 }
 
-int factorial(int num) // function defination
+// num = &n; *num == n
+
+int factorial(int *num) // function defination
 {
     int fact = 1;
-    for (int i = 1; i <= num; i++)
+    for (int i = 1; i <= *num; i++)
     {
         fact *= i; // fact = fact * i;
     }
